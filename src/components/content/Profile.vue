@@ -36,8 +36,6 @@
 import { mapGetters } from "vuex";
 import { getMsg, uploadView } from "@/api/message";
 
-import _ from "lodash";
-
 export default {
   name: "Profile",
 

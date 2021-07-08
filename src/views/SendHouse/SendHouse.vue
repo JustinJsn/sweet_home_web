@@ -104,7 +104,7 @@
 </template>
 
 <script>
-import _ from "lodash";
+import { cloneDeep } from "lodash";
 import city from "@/utils/city";
 import { VerifyImgCode } from "@/api/user";
 import { createEntrusted } from "@/api/entrusted_rental";
@@ -225,7 +225,7 @@ export default {
   },
   methods: {
     handleSubmit(formName) {
-      let postData = _.cloneDeep(this.houseForm);
+      let postData = cloneDeep(this.houseForm);
       delete postData.code;
       
       this.$refs[formName].validate(valid => {

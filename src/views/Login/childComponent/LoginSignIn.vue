@@ -83,7 +83,7 @@
 
 <script>
 import CryptoJS from "@/utils/tools";
-import _ from "lodash";
+import { cloneDeep } from "lodash";
 import { validateEmailPhone, login, VerifyImgCode } from "@/api/user";
 
 export default {
@@ -98,7 +98,7 @@ export default {
   },
   beforeRouteLeave(to, from, next) {
     if (this.remember) {
-      const saveData = _.cloneDeep(this.userForm);
+      const saveData = cloneDeep(this.userForm);
       saveData.password = CryptoJS.encrypt(this.userForm.password);
       window.localStorage.setItem(
         "SH_remember_pwd&name",
@@ -207,7 +207,7 @@ export default {
     handleRemember() {
       window.localStorage.setItem("remember", this.remember);
       if (this.remember) {
-        const saveData = _.cloneDeep(this.userForm);
+        const saveData = cloneDeep(this.userForm);
         saveData.password = CryptoJS.encrypt(this.userForm.password);
         window.localStorage.setItem(
           "SH_remember_pwd&name",

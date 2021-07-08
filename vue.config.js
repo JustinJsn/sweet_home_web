@@ -2,23 +2,15 @@
 // 导入compression-webpack-plugin模块
 const CompressionWebpackPlugin = require('compression-webpack-plugin');
 // 定义压缩文件类型
-const productionGzipExtensions = ['js', 'css']
+const productionGzipExtensions = ['js', 'css'];
+// 包分析优化
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = {
-  devServer: {
-    proxy: {
-      "/api/v1": {
-        target: "http://api.justinjsn.cn/api/v1",
-        changeOrigin: true,
-        ws: true,
-        pathRewrite: {
-          "^/api/v1": ""
-        }
-      }
-    }
-  },
   configureWebpack: {
     plugins: [
+    // 包分析优化
+    new BundleAnalyzerPlugin(),
     // 使用：在 configureWebpack 中配置
     new CompressionWebpackPlugin({
         filename: '[path].gz[query]',

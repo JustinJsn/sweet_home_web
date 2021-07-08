@@ -52,13 +52,13 @@ import { update_info, check_nickName } from "@/api/user";
 
 import { mapGetters } from "vuex";
 
-import _ from "lodash";
+import { cloneDeep, debounce } from "lodash";
 
 export default {
   name: "ProfileSetting",
   data() {
     const that = this;
-    const nickNameValidate = _.debounce(function(rule, value, callback) {
+    const nickNameValidate = debounce(function(rule, value, callback) {
       if (value === "") {
         callback(new Error("请输入昵称"));
       } else {
@@ -100,13 +100,13 @@ export default {
   },
   watch: {
     $route(to, from) {
-      this.userInfo = _.cloneDeep(
+      this.userInfo = cloneDeep(
         JSON.parse(window.localStorage.getItem("SH_userInfo"))
       );
     }
   },
   created() {
-    this.userInfo = _.cloneDeep(
+    this.userInfo = cloneDeep(
       JSON.parse(window.localStorage.getItem("SH_userInfo"))
     );
   },

@@ -244,7 +244,7 @@ import { quillEditor } from "vue-quill-editor";
 
 import { getRental, createHouse } from "@/api/house";
 import city from "@/utils/city";
-import _ from "lodash";
+import { cloneDeep } from "lodash";
 
 export default {
   name: "HousePerfect",
@@ -385,7 +385,7 @@ export default {
   },
   computed: {
     file_list() {
-      return _.cloneDeep([{ url: this.houseInfo.house_pic }]);
+      return cloneDeep([{ url: this.houseInfo.house_pic }]);
     }
   },
   methods: {
