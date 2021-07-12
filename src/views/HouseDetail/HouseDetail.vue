@@ -12,11 +12,11 @@
           </div>
           <div class="head-right">
             <div class="inactive" @click="handleFollow" v-if="!isFollow">
-              <i class="heart-icon"></i>
+              <i class="iconfont icon-heart1"></i>
               <span class="text">关注房源</span>
             </div>
             <div class="active" @click="handleCancelFollow" v-else>
-              <i class="heart-icon"></i>
+              <i class="iconfont icon-heart"></i>
               <span class="text">已关注</span>
             </div>
           </div>
@@ -477,19 +477,13 @@ export default {
       display: flex;
       cursor: pointer;
     }
-    .inactive .heart-icon {
-      width: 16px;
-      height: 16px;
+    .inactive > i {
       margin-right: 6px;
-      background: url("../../assets/images/heart.png") no-repeat;
-      background-size: cover;
+      font-weight: 700;
     }
-    .active .heart-icon {
-      width: 16px;
-      height: 16px;
+    .active > i {
       margin-right: 6px;
-      background: url("../../assets/images/heart-active.png") no-repeat;
-      background-size: cover;
+      color: #fb7e7e;
     }
   }
   h2 {

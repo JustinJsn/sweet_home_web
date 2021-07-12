@@ -131,7 +131,7 @@
                 </a>
               </h3>
               <p class="description">
-                <span v-for="(des, index) of item.description" :key="des">
+                <span v-for="(des, index) of item.description" :key="index">
                   <span v-if="index === item.description.length - 1">
                     {{ des }}
                   </span>

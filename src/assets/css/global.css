@@ -11,25 +11,23 @@
 
 html,
 body {
-  font-family: "Ping Fang";
   height: 100%;
   width: 100%;
 }
 
-@font-face {
-  font-family: "Ping Fang";
-  src: url("../fonts/PingFang-SC-Regular.ttf") format("truetype");
-}
 ::selection {
   background-color: rgba(44, 158, 224, 0.2);
 }
+
 #nprogress .bar {
   background: red !important;
 }
+
 #nprogress .spinner-icon {
   border-top-color: #ff5777;
   border-left-color: #ff5777;
 }
+
 #nprogress .peg {
   box-shadow: none !important;
 }

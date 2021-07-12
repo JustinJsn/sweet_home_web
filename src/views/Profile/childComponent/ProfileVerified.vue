@@ -550,17 +550,18 @@ export default {
           border-radius: 14px;
         }
         &:after {
-          content: "";
-          display: inline-block;
           position: absolute;
-          width: 50px;
-          height: 50px;
-          top: 50%;
-          left: 50%;
-          z-index: 4;
-          background: url("~@/assets/images/upload.svg") no-repeat;
-          background-size: contain;
-          transform: translate(-50%, -50%);
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          font-family: iconfont;
+          content: "\e83c";
+          font-size: 50px;
+          line-height: 130px;
+          text-align: center;
+          color: #1296db;
+          z-index: 9;
         }
       }
     }

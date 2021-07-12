@@ -248,7 +248,7 @@ export default {
       code_txt: "点击获取",
       code_disabled: false,
       timing: 120,
-      // imgSrc: `http://api.justinjsn.cn/api/v1/code/imgCode?time=${Date.now()}`
+      imgSrc: `http://api.justinjsn.cn/api/v1/code/imgCode?time=${Date.now()}`
     };
   },
   methods: {

@@ -49,6 +49,7 @@ export default {
     msgNum: null,
     orderNum: null,
     isDot: false,
+    // 39.108.71.155
     path: "ws://39.108.71.155:1992/",
   }),
 

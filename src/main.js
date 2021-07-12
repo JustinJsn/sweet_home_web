@@ -7,6 +7,7 @@ import BaiduMap from "vue-baidu-map";
 import VueCookies from "vue-cookies";
 
 import "@/assets/css/global.css";
+import "@/assets/fonts/iconfont.css"
 
 import element from './components/element/index'
 import "element-ui/lib/theme-chalk/index.css";
