@@ -23,7 +23,7 @@ git clone https://github.com/JustinJsn/sweet_home_web
 
 npm install
 
-npm run dev
+npm run serve
 ```
 
 ## 目标功能
